@@ -1,0 +1,118 @@
+<!doc
+type html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>有范首页</title> 
+	<link rel="stylesheet" href="../css/shouye.css"/>
+	 <link rel="stylesheet" href="../css/swiper.min.css">
+	 <script src="../js/jquery-3.1.1.js"></script>
+        <script src="../js/swiper.min.js"></script>
+        <script src="../js/select.js"></script>
+	 
+	  <meta name="viewport" content="width=device-width">
+</head>
+<body>
+	<div class="warp">
+	<div class="header">
+		<p></p>
+	<h1><a></a></h1>
+		<ul class="ul1">
+			<li class="li1"><a href="javascript:alert('对不起，您的设备暂不支持扫一扫功能！')"></a></li>
+			<li class="li2"><a href="search.html"></a></li>
+			<li class="li3"><a href=""></a></li>
+		</ul>
+	</div>	
+	<div class="select">
+		<ul>
+			<li><a>首页</a></li>
+			<li><a href="fenlei.html">分类</a></li>
+			<li><a href="dapei.html">搭配</a></li>
+			<li><a href="details.html">详情</a></li>
+			<li><a href="search.html">搜索</a></li>
+			<li><a href="login.html">登录</a></li>
+			<li><a href="wode.html">我的</a></li>
+			<li><a href="shop.html">购物袋</a></li>
+			</ul>
+		</div>
+	 <div class="swiper-container">
+	 	<div class="share-l"></div>
+	 	<div class="share-r"></div>
+        <div class="swiper-scrollbar"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-wrapper">
+        		
+            <div class="swiper-slide" data-history="1"><img src="../img/shouye/banner01.png"></div>
+            <div class="swiper-slide" data-history="1"><img src="../img/shouye/banner02.png"></div>
+            <div class="swiper-slide" data-history="1"><img src="../img/shouye/banner03.png"></div>
+            <div class="swiper-slide" data-history="1"><img src="../img/shouye/banner04.png"></div>
+          <div class="swiper-slide" data-history="1"><img src="../img/shouye/banner05.png"></div>
+          </div>   
+           
+       </div><!--swiper-container-->
+       <div class="line">
+             <p class="p1"></p>
+             <p class="p2">优选品牌</p>
+             <p class="p3"></p>
+       </div>
+       <div class="banner">
+       	<dl class="dl1">
+       		<dd class="dd1"><img src="../img/shouye/shouye-youxuan01.png"></dd>
+       		<dd class="dd2"><img src="../img/shouye/shouye-youxuan02.png"></dd>
+       		<dd class="dd3"><img src="../img/shouye/shouye-youxuan03.png"></dd>
+       	</dl>	
+       	</div>
+       	
+       <div class="logo">
+       	<ul class="ul2">
+       		<li><a><img src="../img/shouye/shouye-pinpai01.png"></a></li>
+       	<li><a><img src="../img/shouye/shouye-pinpai02.png"></a></li>
+       		<li><a><img src="../img/shouye/shouye-pinpai03.png"></a></li>
+       		<li class="li4"><a><img src="../img/shouye/shouye-pinpai04.png"></a></li>
+       		<li><a><img src="../img/shouye/shouye-pinpai05.png"></a></li>
+       		<li><a><img src="../img/shouye/shouye-pinpai06.png"></a></li>
+       	</ul>
+       	<ul class="ul3">
+       		<li><a><img src="../img/shouye/shouye-pinpai07.png"></a></li>
+       		<li><a><img src="../img/shouye/shouye-pinpai08.png"></a></li>
+       		<li><a><img src="../img/shouye/shouye-pinpai09.png"></a></li>
+       		<li class="li5"><a><img src="../img/shouye/shouye-pinpai10.png"></a></li>
+       		<li><a><img src="../img/shouye/shouye-pinpai11.png"></a></li>
+       		<li><a><img src="../img/shouye/shouye-pinpai12.png"></a></li>
+       	</ul>
+       </div>
+       
+	</div><!--warp-->
+          	
+          
+          
+    
+    
+</body>
+</html>
+
+
+<script type="text/javascript">
+		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			});
+   			 var swiper = new Swiper('.swiper-container', {
+ 			loop : true,
+            spaceBetween: 50,
+            slidesPerView: 2,
+            centeredSlides: true,
+            slideToClickedSlide: true,
+            grabCursor: true,
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            scrollbar: '.swiper-scrollbar',
+            pagination: '.swiper-pagination',
+//          history: 'slide',
+        });
+ 		setInterval("swiper.slidePrev()", 3000); 
+ 		
+ 		
+</script>
+
+    

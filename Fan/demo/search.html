@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>搜索</title>
+	<script src="../js/jquery-3.1.1.js"></script>
+	<link rel="stylesheet" href="../css/search.css" />
+	<script src="../js/select.js"></script>
+	<script src="../js/search.js"></script>
+</head>
+<body>
+	<div class="warp">
+	<div class="header">
+		<p></p>
+		<div class="sc"></div>
+		
+	<h1><input type="search" class="inp"></h1>
+		
+	</div>
+	<div class=                                                                                                                                            "select">
+		<ul>
+			<li><a href="index.html">首页</a></li>
+			<li><a href="fenlei.html">分类</a></li>
+			<li><a href="dapei.html">搭配</a></li>
+			<li><a href="details.html">详情</a></li>
+			<li><a href="login.html">登录</a></li>
+			<li><a href="wode.html">我的</a></li>
+			<li><a href="shop.html">购物袋</a></li>
+			</ul>
+			
+		</div>
+		<div class="search">
+			<p></p>
+			<form></form>
+			<ul>
+				<li>日期</li>
+				<li>风力</li>
+				<li>风向</li>
+				<li>高温</li>
+				<li>低温</li>
+				<li>天气</li>
+			</ul>
+			<table border="1">
+			
+		</table>
+		</div>
+		
+	</div><!--warp-->
+	
+</body>
+</html>
+<script>
+   
+
+					
+				    $('.sc').click(function(){
+        var $value=$('.inp').val();
+        
+        $('table').children().remove();
+        if($value!==""){
+            $.ajax({
+                url:"http://wthrcdn.etouch.cn/weather_mini?city="+$value,
+               type: "get",
+               async: true,
+			  dataType: "jsonp",
+			  	success: function(data) {
+	                       console.log(data); 
+							var dataList = data.data.forecast;
+							var datap=data.data.ganmao;
+							$(".search p").append("<span>" +datap + "</span>");
+							
+						    
+							$(".search p").before("<form style='font-size: 30px;'>" + $value + "最近五天的天气状况</form>");
+                                
+							$.each(dataList, function(j, k) {
+								
+								 
+								$("table").append(
+									"<tr><td>" + k.date + "</td><td>" + k.fengli + "</td><td>" + k.fengxiang + "</td><td>" + k.high + "</td><td>" + k.low + "</td><td>" + k.type + "</td></tr>"
+								)
+							})	
+
+							}	
+        })
+    }	
+					
+		})			
+					
+					
+	
+</script>

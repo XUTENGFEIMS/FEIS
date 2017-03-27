@@ -1,0 +1,20 @@
+<ul id="list">  
+   <li><label><input type="checkbox" value="1"> 1.时间都去哪儿了</label></li>
+   <li><label><input type="checkbox" value="2"> 2.海阔天空</label></li>
+   <li><label><input type="checkbox" value="3"> 3.真的爱你</label></li>
+   <li><label><input type="checkbox" value="4"> 4.不再犹豫</label></li>
+   <li><label><input type="checkbox" value="5"> 5.光辉岁月</label></li>
+   <li><label><input type="checkbox" value="6"> 6.喜欢妳</label></li>
+</ul>
+<input type="checkbox" id="all">
+
+<script src="../../checkall/jquery-1.8.3.min.js"></script>
+<script>
+	$("#all").click(function(){   
+    if(this.checked){   
+        $("#list :checkbox").prop("checked", true);  
+    }else{   
+	$("#list :checkbox").prop("checked", false);
+    }   
+});
+</script>
